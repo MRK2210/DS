@@ -1,0 +1,13 @@
+idlj -fall ReverseModule.idl
+
+javac *.java ReverseModule/*.java
+
+
+orbd -ORBIntialPort 1050&
+
+java ReverseServer -ORBIntialPort 1050& -ORBIntialHost localhost&
+
+java ReverseClient -ORBIntialPort 1050& -ORBIntialHost localhost
+
+Then type text
+
